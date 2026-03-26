@@ -156,7 +156,7 @@ const Teorie = () => {
                 </div>
                 <div className="md:col-span-2">
                   <img
-                    src="https://picsum.photos/800/500?random=10"
+                    src="/Gemini_Generated_Image_i97whri97whri97w.png"
                     alt="Comunicare virtuală"
                     className="rounded-2xl w-full h-48 md:h-full object-cover border border-border/30"
                     loading="lazy"

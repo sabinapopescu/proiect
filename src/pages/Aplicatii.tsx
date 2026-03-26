@@ -11,11 +11,11 @@ import {
 } from "@/components/ui/accordion";
 
 const slides = [
-  { caption: "Mesagerie Instantă", seed: 20 },
-  { caption: "Rețele Sociale & Live", seed: 21 },
-  { caption: "Videoconferințe", seed: 22 },
-  { caption: "Platforme Colaborative", seed: 23 },
-  { caption: "Metavers & Gaming", seed: 24 },
+  { caption: "Mesagerie Instantă", img: "/Gemini_Generated_Image_1.png" },
+  { caption: "Rețele Sociale & Live", img: "/Gemini_Generated_Image_2.png" },
+  { caption: "Videoconferințe", img: "/Gemini_Generated_Image_3.png" },
+  { caption: "Platforme Colaborative", img: "/Gemini_Generated_Image_4.png" },
+  { caption: "Metavers & Gaming", img: "/Gemini_Generated_Image_5.png" },
 ];
 
 const platforms = [
@@ -53,14 +53,18 @@ const WebcamDemo = () => {
       setEnded(false);
       const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
       streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-      }
       setStreaming(true);
     } catch {
       setError("🔒 Ai blocat accesul la cameră. Verifică setările browserului!");
     }
   }, []);
+
+  useEffect(() => {
+    if (streaming && videoRef.current && streamRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+      videoRef.current.play().catch(() => {});
+    }
+  }, [streaming]);
 
   const stopCamera = useCallback(() => {
     streamRef.current?.getTracks().forEach((t) => t.stop());
@@ -183,7 +187,7 @@ const Aplicatii = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-neon">
               <div className="aspect-[16/7] relative">
                 <img
-                  src={`https://picsum.photos/1200/500?random=${slides[current].seed}`}
+                  src={slides[current].img}
                   alt={slides[current].caption}
                   className="w-full h-full object-cover transition-opacity duration-500"
                 />
