@@ -26,7 +26,7 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold mb-4 text-foreground">Despre</h4>
           <p className="text-muted-foreground text-sm text-justify">
-            Proiect educațional clasa a X-a — Comunicarea în Spații Virtuale ✨
+            Proiect educațional realizat de Popescu Emilia clasa a X-a — Comunicarea în Spații Virtuale ✨
           </p>
         </div>
       </div>
