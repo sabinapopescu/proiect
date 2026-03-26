@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Acasa from "./pages/Acasa";
 import Teorie from "./pages/Teorie";
-import Mijloace from "./pages/Mijloace";
+import Aplicatii from "./pages/Aplicatii";
 import Quiz from "./pages/Quiz";
 import NotFound from "./pages/NotFound";
 
@@ -20,7 +20,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Acasa />} />
           <Route path="/teorie" element={<Teorie />} />
-          <Route path="/mijloace" element={<Mijloace />} />
+          <Route path="/aplicatii" element={<Aplicatii />} />
+          <Route path="/mijloace" element={<Aplicatii />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
