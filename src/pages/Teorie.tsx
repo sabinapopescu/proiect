@@ -316,7 +316,7 @@ const Teorie = () => {
                   <div className="relative pb-[56.25%] rounded-2xl overflow-hidden shadow-neon">
                     <iframe
                       className="absolute inset-0 w-full h-full"
-                      src="https://www.youtube.com/embed/YygP-PEzSGg"
+                      src="https://www.youtube.com/embed/avh2Ppw5wc8"
                       title="Evoluția comunicării digitale"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
